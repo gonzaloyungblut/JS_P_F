@@ -1,0 +1,14 @@
+.pie {
+    background-color: aqua;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 15px;
+
+    img {
+        height: 40px;
+    }
+}

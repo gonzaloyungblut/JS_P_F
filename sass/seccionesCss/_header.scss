@@ -1,1 +1,11 @@
-header{ background-color: aqua;}
+.nav{ background-color: aqua;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    img{height: 50px;}
+
+}
+.menu{
+    display: flex;
+    padding: 20px;
+}
