@@ -1,11 +1,18 @@
-.nav{ background-color: aqua;
+.nav{ 
+    background-color: aqua;
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
-    img{height: 50px;}
+    min-height: 20vh;
+    padding-left: 5px;
+    img{height: 100px;}
 
 }
 .menu{
     display: flex;
-    padding: 20px;
+    list-style: none;
+    width: 400px;
+    justify-content: space-evenly;
+
 }
