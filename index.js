@@ -15,14 +15,6 @@ function tiendaNiño() {
     alert("Gracias!!!");
 }
 
-function confirmar() {
-    if (opcion == 1) { mensaje = prompt(" Usted eligio indumentaria de adulto " + " Los talles para camiseta y short respectivamente son: " + eleccionCamiseta + eleccionShort);
-        
-    } else { mensaje = prompt(" Usted eligio indumentaria de niño "+ " Los talles para camiseta y short respectivamente son: " + eleccionCamiseta + eleccionShort);
-        
-    } 
-
-}
 
 // simulador interactivo
 
@@ -35,15 +27,44 @@ let bandera = 1;
 while ((opcion == 1 || opcion == 2) && bandera == 1) {
     if (opcion == 1) {
         tiendaAdulto(); bandera = 0;
+        mensaje = prompt(" Usted eligio indumentaria de adulto " + " Los talles para camiseta y short respectivamente son: " + eleccionCamiseta + " - " + eleccionShort + "¿es correcto presione 1 de lo contrario 2?");
 
     } else {
         tiendaNiño(); bandera = 0;
+        mensaje = prompt(" Usted eligio indumentaria de niño " + " Los talles para camiseta y short respectivamente son: " + eleccionCamiseta + " - " + eleccionShort + "¿es correcto presione 1 de lo contrario 2?");
 
     }
 
 }
 
-confirmar();
+
+if (mensaje == 1 && bandera == 0) {
+    pago = prompt("A continuación se detalla: Opcion 1: Precio de su eleccion. Opcion 2: Datos de Pago. Opcion 3: Salir. ")
+
+} else {
+    alert("Muchas gracias por su visita..." + nombre)
+
+}
+
+
+switch (pago) {
+    case '1':
+        if (opcion == 1) {alert("El valor de su compra es 35000 pesos");
+            
+        } else {alert("el valor de su compra es 18000 pesos");
+            
+        }
+        break;
+    case '2':
+        dieciseis = prompt("Ingrese los numeros de su tarjeta de credito");
+        alert("Tarjeta ingresada: " + dieciseis);
+        alert("Compra realizada. Muchas Gracias");
+        break;
+    case '3':
+        alert("Muchas gracias por la vista.");
+        break;
+
+}
 
 
 
@@ -55,3 +76,8 @@ console.log(opcion);
 console.log(eleccionCamiseta);
 
 console.log(eleccionShort);
+
+console.log(mensaje);
+
+console.log(pago);
+
