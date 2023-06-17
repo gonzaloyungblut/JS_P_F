@@ -49,10 +49,12 @@ if (mensaje == 1 && bandera == 0) {
 
 switch (pago) {
     case '1':
-        if (opcion == 1) {alert("El valor de su compra es 35000 pesos");
-            
-        } else {alert("el valor de su compra es 18000 pesos");
-            
+        if (opcion == 1) {
+            alert("El valor de su compra es 35000 pesos");
+
+        } else {
+            alert("el valor de su compra es 18000 pesos");
+
         }
         break;
     case '2':
@@ -87,11 +89,12 @@ console.log(pago);
 // segunda pre entrega
 
 // declaro funcion
-function welcome1 () {
+function welcome1() {
     dni = parseInt(prompt("Bienvenido colega ingrese su DNI"))
+    alert("Gracias");
 }
 //objeto
-class profesor{
+class profesor {
     constructor(id, name, apellido, edad, materia) {
         this.id = id;
         this.name = name;
@@ -99,15 +102,53 @@ class profesor{
         this.edad = edad;
         this.materia = materia;
     }
-    hablar () {
+    hablar() {
         alert("Bienvenido profesor de  " + this.materia);
-    } 
+    }
 }
 
-const profesores = new profesor (1, "Esteban", "Quito", 45, "Matematicas" );
-profesores.hablar();
+//La idea es que el profesor se "logue" a traves de su dni este se compare con los id y devuelva bienvenido profe de ......
 
 welcome1();
 console.log(dni);
+
+const pm = new profesor(1, "Esteban", "Quito", 45, "Matematicas");
+const pl = new profesor(2, "Armando", "Paredes", 50, "Lengua");
+const pi = new profesor(3, "Valeria", "English", 29, "Ingles");
+
+if (dni < 20000000) {
+    let this.id = 1;
+
+} else {
+    if (dni < 30000000 && dni > 20000001) {
+        let this.id = 2;
+
+    } else {
+        let this.id = 3;
+
+    }
+
+}
+
+switch (this.id) {
+    case '1':
+        pm.hablar();
+        break;
+    case '2':
+        pl.hablar();
+        break;
+    case '3':
+        pi.hablar();
+        break;
+}
+
+
+
+
+
+
+
+
+
 
 
