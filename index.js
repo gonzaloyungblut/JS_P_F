@@ -81,3 +81,14 @@ console.log(mensaje);
 
 console.log(pago);
 
+
+
+
+// segunda pre entrega
+
+function welcome1 (){
+    const dni = parseInt(("Bienvenido colega ingrese su DNI"))
+}
+
+welcome1();
+console.log(dni);
