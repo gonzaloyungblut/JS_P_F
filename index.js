@@ -86,9 +86,28 @@ console.log(pago);
 
 // segunda pre entrega
 
-function welcome1 (){
-    const dni = parseInt(("Bienvenido colega ingrese su DNI"))
+// declaro funcion
+function welcome1 () {
+    dni = parseInt(prompt("Bienvenido colega ingrese su DNI"))
 }
+//objeto
+class profesor{
+    constructor(id, name, apellido, edad, materia) {
+        this.id = id;
+        this.name = name;
+        this.apellido = apellido;
+        this.edad = edad;
+        this.materia = materia;
+    }
+    hablar () {
+        alert("Bienvenido profesor de  " + this.materia);
+    } 
+}
+
+const profesores = new profesor (1, "Esteban", "Quito", 45, "Matematicas" );
+profesores.hablar();
 
 welcome1();
 console.log(dni);
+
+
