@@ -71,17 +71,17 @@ switch (pago) {
 
 
 // control interno:
-console.log(nombre);
+//console.log(nombre);
 
-console.log(opcion);
+//console.log(opcion);
 
-console.log(eleccionCamiseta);
+//console.log(eleccionCamiseta);
 
-console.log(eleccionShort);
+//console.log(eleccionShort);
 
-console.log(mensaje);
+//console.log(mensaje);
 
-console.log(pago);
+//console.log(pago);
 
 
 
@@ -105,7 +105,7 @@ class profesor {
         this.materia = materia;
     }
     hablar() {
-        alert("Bienvenido profesor de  " + this.materia  + "       ");
+        alert("Bienvenido profesor de  " + this.materia + "       ");
     }
 }
 
@@ -123,11 +123,11 @@ if (z < pm.dni) {
     ayuda = 1;
 
 } else {
-    if ( z < pl.dni && z > pi.dni) {
-    ayuda = 2;
+    if (z < pl.dni && z > pi.dni) {
+        ayuda = 2;
 
     } else {
-    ayuda = 3;
+        ayuda = 3;
 
     }
 
@@ -151,13 +151,34 @@ switch (ayuda) {
 
 let cantidad = prompt("A continuacion ingrese la cantidad de alumnos de su clase...");
 console.log(cantidad);
-alert("Perfecto." );
+alert("Perfecto.");
 const alumnos = [];
-do { let ingreso = prompt ("ingrese el apellido del alumno"); alumnos.push(ingreso.toUpperCase());
-    
-} while (alumnos.length != cantidad);
-alert (alumnos.join(" - "));
+do {
+    let ingreso = prompt("ingrese el apellido del alumno"); alumnos.push(ingreso.toUpperCase());
 
+} while (alumnos.length != cantidad);
+alert(alumnos.join(" - "));
+
+//profesor va a cargar las notas de los 3 trimestres de caga alumno y por promedio se calculara la nota final devolviendo si este aprobo o desaprobo (rinde en diciembre o marzo)
+const nota1 = [];
+const notasFinal = [];
+
+let trimestres = 3;
+
+for (let index = 0; index < cantidad; index++) {
+    let sum = 0;
+    promedio = 0;
+    alert(" Carguemos las notas de alumno " + alumnos[index]);
+    do {
+        let calificacion = prompt("ingrese la nota del alumno " + alumnos[index]); nota1.push(calificacion);
+        sum = sum + calificacion;
+    } while (nota1.length != trimestres);
+    promedio = (sum/trimestres);
+    notasFinal.push(promedio);
+    nota1.splice(0,3);
+}
+
+// for (let index = 0; index < trimestres; index++){console.log(nota1[index]);}
 
 
 
