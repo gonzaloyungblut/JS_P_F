@@ -90,7 +90,7 @@ switch (pago) {
 
 // declaro funcion
 function welcome1() {
-    z = prompt("Bienvenido colega ingrese su DNI");
+    z = parseInt(prompt("Bienvenido colega ingrese su DNI"));
     alert("Gracias");
 }
 
@@ -114,16 +114,16 @@ class profesor {
 welcome1();
 console.log(z);
 
-const pm = new profesor("25000000", "Esteban", "Quito", "45", "Matematicas");
-const pl = new profesor("36000000", "Armando", "Paredes", "50", "Lengua");
-const pi = new profesor("40000000", "Valeria", "English", "29", "Ingles");
+const pm = new profesor(25000000, "Esteban", "Quito", 45, "Matematicas");
+const pl = new profesor(36000000, "Armando", "Paredes", 50, "Lengua");
+const pi = new profesor(40000000, "Valeria", "English", 29, "Ingles");
 
 
 if (z < pm.dni) {
     ayuda = 1;
 
 } else {
-    if (z < pl.dni && z > pi.dni) {
+    if (z > pm.dni && z < pi.dni) {
         ayuda = 2;
 
     } else {
@@ -149,7 +149,7 @@ switch (ayuda) {
 
 //este profe va a cargar sus alumnos
 
-let cantidad = prompt("A continuacion ingrese la cantidad de alumnos de su clase...");
+let cantidad = parseInt(prompt("A continuacion ingrese la cantidad de alumnos de su clase..."));
 console.log(cantidad);
 alert("Perfecto.");
 const alumnos = [];
@@ -166,19 +166,25 @@ const notasFinal = [];
 let trimestres = 3;
 
 for (let index = 0; index < cantidad; index++) {
-    let sum = 0;
-    promedio = 0;
+    var sum = 0;
+    var promedio = 0;
     alert(" Carguemos las notas de alumno " + alumnos[index]);
     do {
-        let calificacion = prompt("ingrese la nota del alumno " + alumnos[index]); nota1.push(calificacion);
-        sum = sum + calificacion;
+        let calificacion = parseInt(prompt("ingrese la nota del alumno " + alumnos[index])); nota1.push(calificacion);
+        sum += calificacion;
     } while (nota1.length != trimestres);
-    promedio = (sum/trimestres);
+    promedio = sum/trimestres;
     notasFinal.push(promedio);
-    nota1.splice(0,3);
+    nota1.splice( 0 , 3);
 }
 
-// for (let index = 0; index < trimestres; index++){console.log(nota1[index]);}
+console.log(trimestres);
+console.log(sum);
+console.log(promedio);
+
+
+for (let index = 0; index < cantidad; index++){console.log(notasFinal[index]);}
+
 
 
 
