@@ -93,6 +93,8 @@ function welcome1() {
     z = prompt("Bienvenido colega ingrese su DNI");
     alert("Gracias");
 }
+
+
 //objeto
 class profesor {
     constructor(dni, name, apellido, edad, materia) {
@@ -103,12 +105,12 @@ class profesor {
         this.materia = materia;
     }
     hablar() {
-        alert("Bienvenido profesor de  " + this.materia);
+        alert("Bienvenido profesor de  " + this.materia  + "       ");
     }
 }
 
 //La idea es que el profesor se "logue" a traves de su dni este se compare con los id y devuelva bienvenido profe de ......
-
+// Estimado tutor los console.log que realizo son controles mios para ver como va el codigo... 
 welcome1();
 console.log(z);
 
@@ -144,6 +146,18 @@ switch (ayuda) {
         pi.hablar();
         break;
 }
+
+//este profe va a cargar sus alumnos
+
+let cantidad = prompt("A continuacion ingrese la cantidad de alumnos de su clase...");
+console.log(cantidad);
+alert("Perfecto." );
+const alumnos = [];
+do { let ingreso = prompt ("ingrese el apellido del alumno"); alumnos.push(ingreso.toUpperCase());
+    
+} while (alumnos.length != cantidad);
+alert (alumnos.join(" - "));
+
 
 
 
