@@ -90,13 +90,13 @@ console.log(pago);
 
 // declaro funcion
 function welcome1() {
-    dni = parseInt(prompt("Bienvenido colega ingrese su DNI"))
+    z = prompt("Bienvenido colega ingrese su DNI");
     alert("Gracias");
 }
 //objeto
 class profesor {
-    constructor(id, name, apellido, edad, materia) {
-        this.id = id;
+    constructor(dni, name, apellido, edad, materia) {
+        this.dni = dni;
         this.name = name;
         this.apellido = apellido;
         this.edad = edad;
@@ -110,34 +110,37 @@ class profesor {
 //La idea es que el profesor se "logue" a traves de su dni este se compare con los id y devuelva bienvenido profe de ......
 
 welcome1();
-console.log(dni);
+console.log(z);
 
-const pm = new profesor(1, "Esteban", "Quito", 45, "Matematicas");
-const pl = new profesor(2, "Armando", "Paredes", 50, "Lengua");
-const pi = new profesor(3, "Valeria", "English", 29, "Ingles");
+const pm = new profesor("25000000", "Esteban", "Quito", "45", "Matematicas");
+const pl = new profesor("36000000", "Armando", "Paredes", "50", "Lengua");
+const pi = new profesor("40000000", "Valeria", "English", "29", "Ingles");
 
-if (dni < 20000000) {
-    let this.id = 1;
+
+if (z < pm.dni) {
+    ayuda = 1;
 
 } else {
-    if (dni < 30000000 && dni > 20000001) {
-        let this.id = 2;
+    if ( z < pl.dni && z > pi.dni) {
+    ayuda = 2;
 
     } else {
-        let this.id = 3;
+    ayuda = 3;
 
     }
 
 }
 
-switch (this.id) {
-    case '1':
+console.log(ayuda);
+
+switch (ayuda) {
+    case 1:
         pm.hablar();
         break;
-    case '2':
+    case 2:
         pl.hablar();
         break;
-    case '3':
+    case 3:
         pi.hablar();
         break;
 }
