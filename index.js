@@ -89,6 +89,8 @@ switch (pago) {
 // segunda pre entrega
 
 // declaro funcion
+
+alert("desde aqui segunda pre entrega profe!!!!!!");
 function welcome1() {
     z = parseInt(prompt("Bienvenido colega ingrese su DNI"));
     alert("Gracias");
@@ -185,6 +187,17 @@ console.log(promedio);
 
 for (let index = 0; index < cantidad; index++){console.log(notasFinal[index]);}
 
+// debe informar con aprobados, dicimbre y marzo
+
+let aprobado = notasFinal.filter(element => element >= 7);
+let marzo = notasFinal.filter(element => element < 4 );
+let diciembre = notasFinal.filter(element => (element >=4 && element <7) );
+
+console.log(aprobado);
+console.log(marzo);
+console.log(diciembre);
+
+alert("Querido profesor le informamos que han aprobado" + aprobado.lenght + "a diciembre deberan ir" + diciembre.lenght + "y lamentablemente a marzo" + marzo.length + "alumnos" );
 
 
 
